@@ -686,9 +686,9 @@
         % 中文校系名稱 (28, 27)
         {\bfseries \fontsize{28}{27}\selectfont
           \ccu@university\par
-          \vspace{0.75in}
+          \vspace{0.2in}
           \ccu@institute\ccu@degree\ccu@type\par
-          \vspace{1.5in}}
+          \vspace{0.1in}}
         
         % 初稿 (18, 27)
         \ifthenelse{\equal{#1}{draft}}{
@@ -699,20 +699,19 @@
 
         % 中英文論文題目 (18, 27)
         \vfill
-        {\bfseries \fontsize{18}{27}\selectfont
+        {\bfseries \fontsize{20}{25}\selectfont
           \ccu@title\par
-          \vspace{0.5in}
+          \vspace{0.1in}
           \ccu@title@en\par
         }
 
         % 中英文作者姓名\指導教授 (18, 27)
-        \begin{center}
-          {\bfseries \fontsize{18}{27}\selectfont
-            \vspace{2in}
-            研究生：\ccu@author\par \,\,\,\,\,\,
-            指導教授：\ccu@advisor~博士\par
-          }
-        \end{center}
+        \vfill
+        {\bfseries \fontsize{18}{27}\selectfont
+          \vspace{3.5in}
+          研究生：\ccu@author\par \,\,\,\,\,\,
+          指導教授：\ccu@advisor~博士\par
+        }
 
         \vfill
         % 論文撰寫日期   (18, 27)
