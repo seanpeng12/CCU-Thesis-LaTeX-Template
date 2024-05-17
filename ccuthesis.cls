@@ -709,7 +709,7 @@
         \begin{center}
           {\bfseries \fontsize{18}{27}\selectfont
             \vspace{2in}
-            研究生：\ccu@author\par
+            研究生：\ccu@author\par \,\,\,\,\,\,
             指導教授：\ccu@advisor~博士\par
           }
         \end{center}
