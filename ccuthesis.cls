@@ -270,7 +270,7 @@
     name    = college@en,
   },
   institute = {
-    default = {電機工程學研究所},
+    default = {資訊工程研究所},
   },
   institute* = {
     default = {Institute of Electrical Engineering},
@@ -305,10 +305,10 @@
     name    = keywords@en,
   },
   date = {
-    default = {一百一十四年~七月},
+    default = {一百一十三年六月},
   },
   date* = {
-    default = {July~2025},
+    default = {July~2024},
     name    = date@en,
   },
 }
@@ -532,10 +532,11 @@
     BoldFont = *-Bold ,
     ItalicFont = *-Italic ,
     BoldItalicFont = *-BoldItalic, ]
-  \setCJKmainfont{BiauKai}[
-    Path = \ccu@path@cjkfont ,
-    Extension = .ttf ,
-    BoldFont = Kaiti-Black, ]
+  % \setCJKmainfont{BiauKai}[
+  %   Path = \ccu@path@cjkfont ,
+  %   Extension = .ttf ,
+  %   BoldFont = Kaiti-Black, ]
+  \setCJKmainfont{標楷體}[Scale=1.0, AutoFakeBold=true, AutoFakeSlant=0.4]
 }
 
 % [版面大小]
@@ -679,15 +680,15 @@
 %
 \newcommand{\makecover}[1]{
   \ccu@setgeometry{\ccu@geometry@cover}
-
   \begin{titlepage}
     \begin{singlespace}
       \begin{center}
         % 中文校系名稱 (28, 27)
-        \fontsize{28}{27}\selectfont
-        \ccu@university\ccu@institute\par
-        \vspace{1cm}
-        \ccu@degree\ccu@type\par
+        {\bfseries \fontsize{28}{27}\selectfont
+          \ccu@university\par
+          \vspace{0.75in}
+          \ccu@institute\ccu@degree\ccu@type\par
+          \vspace{1.5in}}
         
         % 初稿 (18, 27)
         \ifthenelse{\equal{#1}{draft}}{
@@ -698,24 +699,29 @@
 
         % 中英文論文題目 (18, 27)
         \vfill
-        \fontsize{18}{27}\selectfont
-        \ccu@title\par
-        \ccu@title@en\par
+        {\bfseries \fontsize{18}{27}\selectfont
+          \ccu@title\par
+          \vspace{0.5in}
+          \ccu@title@en\par
+        }
 
-        % 中英文作者姓名 (18, 27)
-        \vfill
-        \ccu@author\par
-        
-        % 中英文指導教授 (18, 27)
-        \vfill
-        指導教授：\ccu@advisor~博士\par
+        % 中英文作者姓名\指導教授 (18, 27)
+        \begin{center}
+          {\bfseries \fontsize{18}{27}\selectfont
+            \vspace{2in}
+            研究生：\ccu@author\par
+            指導教授：\ccu@advisor~博士\par
+          }
+        \end{center}
 
+        \vfill
         % 論文撰寫日期   (18, 27)
-        中華民國~~\ccu@date
+        {\bfseries \fontsize{18}{27}\selectfont
+          中華民國~~\ccu@date
+        }
       \end{center}
     \end{singlespace}
   \end{titlepage}
-
   % 清除頁碼
   \clearpage
   \restoregeometry

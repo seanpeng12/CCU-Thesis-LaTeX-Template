@@ -21,7 +21,7 @@
 	% 若有審定書pdf檔案，可用\renderverification{檔案路徑}渲染審定書
 	% 
 	% \makeverification                               % 口試委員審定書（Verification Letter）
-	\renderverification{frontpages/verification}      % 渲染口試委員審定書（Render Verification Letter）
+	%\renderverification{frontpages/verification}      % 渲染口試委員審定書（Render Verification Letter）
 
 	% 加入浮水印 Watermark
 	% 若需要再封面加上浮水印，請將\makewatermark{watermark}放在\makecover之前
@@ -49,6 +49,7 @@
 
 	% 參考文獻 References
 	\refmatter
+	\nocite{*}
 	\bibliographystyle{IEEEtran}                      % 參考文獻格式（References Style）
 	\bibliography{backpages/references}               % 參考文獻資料庫（References Database）
 
